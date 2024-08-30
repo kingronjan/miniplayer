@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini-player</title>
+</head>
+
+<style>
+
+    .modify-time {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+</style>
+
+<body>
+
+<h4>List of videos</h4>
+
+<ul>
+    {% for path, name, modify_time in files %}
+        <li><a href="{{ url_for('video', filename=path) }}">{{ name }}</a> <span class="modify-time">{{ modify_time }}</span></li>
+    {% endfor %}
+</ul>
+
+</body>
+
+</html>

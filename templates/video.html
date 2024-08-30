@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ filename }}</title>
+</head>
+
+<style>
+    .video-content {
+        background-color: rgb(40, 46, 83);
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-el {
+        object-fit: fill;
+    }
+</style>
+
+<body>
+
+<div class="video-content">
+        <video controls class="video-el" preload="auto" width="100%" height="100%">
+        <source src="/static/videos/{{ filename }}" type="video/mp4">
+    </video>
+</div>
+
+</body>
+
+</html>
